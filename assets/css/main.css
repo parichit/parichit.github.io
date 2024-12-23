@@ -1,0 +1,18 @@
+@import "minimal-mistakes";
+
+html {
+  /* font-size: 16px;  */
+
+  @include breakpoint($medium) {
+    /* font-size: 18px;  */
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+
+  @include breakpoint($large) {
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+
+  @include breakpoint($x-large) {
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+}
