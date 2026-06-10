@@ -61,9 +61,9 @@ window.SITE = {
     location:  "Maryland, USA",
     // Drop your photo at assets/portrait.jpg (square works best). Until you do,
     // a tasteful placeholder shows in its place.
-    photo:     "assets/portrait.jpg",
+    photo:     "assets/portrait.png",
     // Your CV. Replace the file at assets/cv.pdf with your own.
-    cv:        "assets/cv.pdf",
+    cv:        "assets/CV.pdf",
     // Shown as a small badge when you fill it in (e.g. job-hunting status).
     // Leave as "" to hide it; edit the text anytime to show it again.
     // Example:  availability: "Open to research scientist & faculty roles — 2026",
