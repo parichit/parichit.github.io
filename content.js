@@ -67,7 +67,7 @@ window.SITE = {
     // Shown as a small badge when you fill it in (e.g. job-hunting status).
     // Leave as "" to hide it; edit the text anytime to show it again.
     // Example:  availability: "Open to research scientist & faculty roles — 2026",
-    availability: "",
+    availability: "Open to research scientist & faculty roles - 2026",
   },
 
   /* ── LINKS  (set any to "" to hide that icon) ───────────────────────────── */
