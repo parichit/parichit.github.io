@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Website — Setup, Hosting &amp; Discoverability Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Spline+Sans+Mono:wght@400;500&display=swap');
+  :root{
+    --bg:oklch(0.985 0.007 75); --card:oklch(0.995 0.004 80);
+    --ink:oklch(0.285 0.012 60); --soft:oklch(0.46 0.013 58); --faint:oklch(0.60 0.012 58);
+    --line:oklch(0.90 0.010 70); --accent:oklch(0.62 0.13 45); --accent-ink:oklch(0.45 0.12 42);
+    --wash:oklch(0.95 0.03 55);
+    --sans:"Hanken Grotesk",system-ui,sans-serif; --serif:"Newsreader",Georgia,serif; --mono:"Spline Sans Mono",monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:48rem;margin:0 auto;padding:0 1.5rem}
+  header.top{border-bottom:1px solid var(--line);padding:3.5rem 0 2.5rem;background:var(--wash)}
+  header.top .wrap{display:flex;flex-direction:column;gap:.4rem}
+  .kick{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink)}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(2rem,1.4rem+2.4vw,2.9rem);line-height:1.1;margin:.2rem 0 0;letter-spacing:-.02em}
+  header.top p{color:var(--soft);margin:.6rem 0 0;max-width:34rem}
+  h2{font-family:var(--serif);font-weight:600;font-size:1.7rem;margin:3.2rem 0 .3rem;letter-spacing:-.01em;
+    padding-top:2rem;border-top:1px solid var(--line)}
+  h2 .n{font-family:var(--mono);font-size:.95rem;color:var(--accent);margin-right:.55rem;vertical-align:.1em}
+  h3{font-size:1.12rem;font-weight:600;margin:1.8rem 0 .3rem}
+  p{margin:.7rem 0;text-wrap:pretty}
+  a{color:var(--accent-ink)}
+  ul,ol{margin:.6rem 0;padding-left:1.3rem}
+  li{margin:.35rem 0}
+  code{font-family:var(--mono);font-size:.86em;background:oklch(0.94 0.01 70);padding:.1rem .4rem;border-radius:5px}
+  pre{font-family:var(--mono);font-size:.82rem;line-height:1.6;background:oklch(0.27 0.011 60);color:oklch(0.93 0.01 78);
+    padding:1.1rem 1.2rem;border-radius:12px;overflow:auto;margin:1rem 0}
+  pre .c{color:oklch(0.7 0.02 70)}
+  .callout{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);
+    border-radius:10px;padding:1rem 1.2rem;margin:1.4rem 0}
+  .callout .t{font-weight:600;display:block;margin-bottom:.25rem}
+  .step{display:grid;grid-template-columns:2rem 1fr;gap:.9rem;align-items:start;margin:1.1rem 0}
+  .step .num{font-family:var(--mono);font-size:.8rem;color:#fff;background:var(--accent);width:1.7rem;height:1.7rem;
+    border-radius:50%;display:grid;place-items:center;margin-top:.15rem}
+  .step .num.q{background:var(--ink)}
+  .toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.2rem 1.4rem;margin:2rem 0}
+  .toc ol{margin:.4rem 0 0;columns:2;column-gap:1.4rem}
+  .toc a{text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+  footer{border-top:1px solid var(--line);margin-top:3.5rem;padding:2rem 0;color:var(--faint);font-size:.9rem}
+  table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.95rem}
+  td,th{text-align:left;padding:.55rem .7rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--faint)}
+  kbd{font-family:var(--mono);font-size:.8em;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:.05rem .4rem;background:var(--card)}
+  @media print{body{font-size:12pt}header.top{background:none}pre{background:#f3f0ea;color:#222}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <span class="kick">Your personal website</span>
+  <h1>Setup, hosting &amp; discoverability</h1>
+  <p>Everything you need to edit your site, publish it free on GitHub Pages, and help people (and Google) find it. Keep this open in a tab while you work.</p>
+</div></header>
+
+<div class="wrap">
+
+  <div class="toc">
+    <span class="kick">Contents</span>
+    <ol>
+      <li><a href="#files">What's in the folder</a></li>
+      <li><a href="#edit">Editing your content</a></li>
+      <li><a href="#photo">Adding your photo &amp; CV</a></li>
+      <li><a href="#design">Choosing a design</a></li>
+      <li><a href="#publish">Publishing on GitHub Pages</a></li>
+      <li><a href="#update">Updating the live site</a></li>
+      <li><a href="#domain">Custom domain (optional)</a></li>
+      <li><a href="#discover">Getting discovered</a></li>
+      <li><a href="#checklist">Launch checklist</a></li>
+    </ol>
+  </div>
+
+  <h2 id="files"><span class="n">01</span>What's in the folder</h2>
+  <p>Your site is just a handful of plain files — no build step, no server, nothing to install.</p>
+  <table>
+    <tr><th>File</th><th>What it is</th></tr>
+    <tr><td><code>content.js</code></td><td><b>This is the file you edit most.</b> All your words, links, and papers — for every page.</td></tr>
+    <tr><td><code>index.html</code></td><td>Home page (hero + About + Research + Contact). Edit its title/SEO tags once.</td></tr>
+    <tr><td><code>publications.html</code><br><code>teaching.html</code><br><code>writing.html</code></td><td>The other pages. They all read the same <code>content.js</code> — you don't edit these.</td></tr>
+    <tr><td><code>site.css</code></td><td>The design system (colors, type, spacing). Rarely needs touching.</td></tr>
+    <tr><td><code>render.js</code>, <code>design-mode.js</code></td><td>Build the pages and the design studio. You don't edit these.</td></tr>
+    <tr><td><code>assets/</code></td><td>Your photo, CV PDF, and any project images go here.</td></tr>
+  </table>
+  <div class="callout"><span class="t">One data file, many pages</span>
+    Your site has separate pages for Publications, Teaching, and Writing, plus a Home page that carries About, Research and Contact. <b>All of them pull from the same <code>content.js</code></b> — edit once, every page updates. Your CV link opens <code>assets/cv.pdf</code> straight in the browser.</div>
+  <div class="callout"><span class="t">The golden rule</span>
+    To change what the site <em>says</em>, edit <code>content.js</code>. To change how it <em>looks</em>, use the Design studio (next section) or <code>site.css</code>.</div>
+
+  <h2 id="edit"><span class="n">02</span>Editing your content</h2>
+  <p>Open <code>content.js</code> in any text editor (even Notepad / TextEdit works, but a free editor like <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a> is nicer). You'll see clearly-labelled sections. Change the text between the quotes, save, and refresh your browser.</p>
+  <h3>Four rules so nothing breaks</h3>
+  <ul>
+    <li>Keep the <code>"quotes"</code> around every piece of text.</li>
+    <li>Keep the comma at the end of each line inside <code>{ }</code> and <code>[ ]</code>.</li>
+    <li>To <b>add</b> an item (a paper, a news entry), copy a whole <code>{ … }</code> block — from one <code>{</code> to its matching <code>}</code> plus the comma — and paste it below.</li>
+    <li>To <b>hide</b> a whole section, set its <code>enabled: true</code> to <code>enabled: false</code>.</li>
+  </ul>
+  <h3>Two handy formatting tricks</h3>
+  <p>Inside news items and bios you can use:</p>
+  <pre><span class="c">// bold text:</span>
+"Our paper was accepted to **ICML 2026**."
+
+<span class="c">// a link:</span>
+"Read more on [my blog](https://example.com)."</pre>
+
+  <h3>Writing a real blog post</h3>
+  <p>The <code>blog</code> section in <code>content.js</code> holds two kinds of entry:</p>
+  <ul>
+    <li>A <b>full on-site post</b> — give it a <code>slug</code> (a short web-friendly name) and a <code>body</code>. It opens as its own page at <code>post.html?p=your-slug</code> with a proper reading layout, automatic word count &amp; reading time, and footnotes.</li>
+    <li>An <b>external link</b> — give it a <code>link</code> instead of a body, and it simply opens that URL (handy for guest posts).</li>
+  </ul>
+  <p>A post <code>body</code> is a list of simple blocks — you mix and match:</p>
+  <pre>body: [
+  { h: <span class="c">"A subheading"</span> },
+  { p: <span class="c">"A paragraph with **bold**, *italic*, [links](url), and a footnote[^1]."</span> },
+  { quote: <span class="c">"A pulled-out quote or a counter-argument."</span> },
+  { list: [<span class="c">"first point"</span>, <span class="c">"second point"</span>] },
+  { code: <span class="c">"pip install scquant"</span>, lang: <span class="c">"bash"</span> },
+  { image: <span class="c">"assets/figure.jpg"</span>, caption: <span class="c">"Optional caption"</span> },
+],
+footnotes: [ <span class="c">"Defines [^1]."</span> ],</pre>
+  <p>To add a new post, copy an existing post's <code>{ … }</code> block, paste it at the top of the list (newest first), and change the <code>slug</code>, <code>title</code>, <code>date</code>, and <code>body</code>.</p>
+  <div class="callout"><span class="t">If the page goes blank after an edit</span>
+    You almost certainly removed a quote, comma, or bracket. Undo your last change (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>Z</kbd>) and try again more carefully. Tip: edit one thing at a time and refresh, so you always know what broke it.</div>
+
+  <h2 id="photo"><span class="n">03</span>Adding your photo &amp; CV</h2>
+  <ol>
+    <li>Put a square-ish headshot in the <code>assets</code> folder named <code>portrait.jpg</code>.</li>
+    <li>Put your CV in <code>assets</code> named <code>cv.pdf</code>.</li>
+    <li>(Optional) Add <code>research-1.jpg</code>, <code>research-2.jpg</code>, etc. for project thumbnails, and a <code>og.jpg</code> (1200×630) for nice link previews when you share the site.</li>
+  </ol>
+  <p>That's it — the site picks them up automatically. Until you add them, tasteful placeholders show in their place, so the site never looks broken.</p>
+
+  <h2 id="design"><span class="n">04</span>Choosing a design</h2>
+  <p>While you preview the site here, open the <b>Tweaks</b> panel (the toggle in the toolbar) to see the <b>Design studio</b>. Flip between hero layouts, accent colors, sans/serif headings, density, and dark mode — live.</p>
+  <p>When you find a combination you love, click <b>“Copy theme settings”</b> and paste the block it gives you over the <code>theme: { … }</code> block at the top of <code>content.js</code>. That locks it in for your real site.</p>
+  <div class="callout"><span class="t">Why you won't see Tweaks on the live site</span>
+    The Design studio only loads inside this preview. Your published site stays lean and fast — no extra code is ever sent to visitors.</div>
+
+  <h2 id="publish"><span class="n">05</span>Publishing on GitHub Pages</h2>
+  <p>GitHub Pages hosts static sites <b>free, forever</b>, at <code>https://USERNAME.github.io</code>. Here's the whole path from zero.</p>
+
+  <div class="step"><div class="num">1</div><div>
+    <b>Create a free GitHub account</b> at <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a>. Pick a username you're happy to show publicly — it becomes part of your web address (e.g. <code>parichit.github.io</code>).
+  </div></div>
+  <div class="step"><div class="num">2</div><div>
+    <b>Create a new repository</b> named exactly <code>USERNAME.github.io</code> (replace USERNAME with <em>your</em> username, all lowercase). Set it to <b>Public</b>. This special name is what makes it your main site.
+  </div></div>
+  <div class="step"><div class="num">3</div><div>
+    <b>Upload your files.</b> On the new repo's page click <b>“uploading an existing file”</b>, then drag in <em>everything</em> from your site folder — all the <code>.html</code> pages (including <code>post.html</code>), <code>content.js</code>, <code>site.css</code>, <code>render.js</code>, <code>design-mode.js</code>, and the <code>assets</code> folder. Click <b>Commit changes</b>.
+  </div></div>
+  <div class="step"><div class="num">4</div><div>
+    <b>Turn on Pages.</b> Go to <b>Settings → Pages</b>. Under “Build and deployment”, set <b>Source</b> to <b>Deploy from a branch</b>, choose the <code>main</code> branch and <code>/ (root)</code> folder, and click <b>Save</b>.
+  </div></div>
+  <div class="step"><div class="num">5</div><div>
+    <b>Wait ~1 minute, then visit</b> <code>https://USERNAME.github.io</code>. Done — your site is live on the internet. 🎉
+  </div></div>
+  <div class="callout"><span class="t">Prefer not to use the command line?</span>
+    You never have to. Everything above works through GitHub's website with drag-and-drop. The free <a href="https://desktop.github.com/" target="_blank" rel="noopener">GitHub Desktop</a> app is an even smoother way to upload changes if you'd like one.</div>
+
+  <h2 id="update"><span class="n">06</span>Updating the live site later</h2>
+  <p>Any time you publish a paper, add news, or tweak your bio:</p>
+  <ol>
+    <li>Edit <code>content.js</code> on your computer and confirm it looks right by opening <code>index.html</code> locally.</li>
+    <li>On your repo, open the file (or the <code>assets</code> folder), click the pencil ✏️ / upload, drop in the new version, and <b>Commit changes</b>.</li>
+    <li>Your live site refreshes within a minute. No re-publishing needed.</li>
+  </ol>
+
+  <h2 id="domain"><span class="n">07</span>Custom domain (optional)</h2>
+  <p>The free <code>USERNAME.github.io</code> address is perfectly professional and many academics use it. If you later want something like <code>parichitsharma.com</code>:</p>
+  <ol>
+    <li>Buy the domain (~$10–15/yr) from a registrar like Namecheap, Cloudflare, or Porkbun.</li>
+    <li>In your repo's <b>Settings → Pages → Custom domain</b>, enter your domain and Save. This creates a <code>CNAME</code> file in the repo.</li>
+    <li>At your registrar, add the DNS records GitHub shows you (four <code>A</code> records, plus a <code>CNAME</code> for <code>www</code>). GitHub's <a href="https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site" target="_blank" rel="noopener">step-by-step docs</a> list the exact values.</li>
+    <li>Tick <b>Enforce HTTPS</b> once it becomes available (free, automatic).</li>
+  </ol>
+  <div class="callout"><span class="t">Remember to update your links</span>
+    If you move to a custom domain, change the <code>USERNAME.github.io</code> addresses inside <code>index.html</code> (the <code>canonical</code>, Open Graph, and JSON-LD tags) to your new domain.</div>
+
+  <h2 id="discover"><span class="n">08</span>Getting discovered</h2>
+  <p>A site nobody can find isn't doing its job. Here's how to make sure you show up — for your name, and for your research.</p>
+
+  <h3>Tell Google it exists</h3>
+  <ul>
+    <li>Add your site to <a href="https://search.google.com/search-console" target="_blank" rel="noopener">Google Search Console</a> (free). Verify ownership, then submit your <code>sitemap.xml</code>. This is the single highest-impact step.</li>
+    <li>Your folder already includes a <code>sitemap.xml</code> and <code>robots.txt</code> — just update the <code>USERNAME.github.io</code> address inside them.</li>
+  </ul>
+
+  <h3>Connect your scholarly identity</h3>
+  <ul>
+    <li>Put your website URL in your <b>Google Scholar</b> profile, <b>ORCID</b>, <b>LinkedIn</b>, your university page, and your email signature. Every link pointing to your site raises it in search results.</li>
+    <li>Keep the links in <code>content.js</code> accurate — they're also written into the site's structured data, which is what can earn you a Google “knowledge panel”.</li>
+  </ul>
+
+  <h3>Make sharing look good</h3>
+  <ul>
+    <li>Add an <code>assets/og.jpg</code> (1200×630). It's the image people see when your link is shared on X, LinkedIn, or Slack.</li>
+    <li>Use a clear, keyword-rich <code>&lt;title&gt;</code> and description in <code>index.html</code> — e.g. your name plus your field. That's the text Google shows in results.</li>
+  </ul>
+
+  <h3>Keep it fresh</h3>
+  <ul>
+    <li>Update the <b>News</b> section whenever something happens. Active sites rank better and signal you're, well, active.</li>
+    <li>Writing the occasional blog post gives Google more pages to index and more reasons for people to link to you.</li>
+  </ul>
+
+  <h2 id="checklist"><span class="n">09</span>Launch checklist</h2>
+  <ul>
+    <li>☐ Filled in your real details in <code>content.js</code></li>
+    <li>☐ Added <code>assets/portrait.jpg</code> and <code>assets/cv.pdf</code></li>
+    <li>☐ Picked a design and pasted the theme block into <code>content.js</code></li>
+    <li>☐ Updated <code>&lt;title&gt;</code>, description, and the <code>USERNAME.github.io</code> URLs in <code>index.html</code></li>
+    <li>☐ Updated the URL in <code>sitemap.xml</code> and <code>robots.txt</code></li>
+    <li>☐ Published to GitHub Pages and confirmed it loads</li>
+    <li>☐ Submitted the site to Google Search Console</li>
+    <li>☐ Added the site link to Scholar, ORCID, LinkedIn, and your email signature</li>
+  </ul>
+
+</div>
+
+<footer><div class="wrap">You've got this. Edit boldly — you can always undo. · Tip: print this page (<kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>P</kbd>) to keep a copy.</div></footer>
+</body>
+</html>
