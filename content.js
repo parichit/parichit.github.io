@@ -63,7 +63,7 @@ window.SITE = {
     // a tasteful placeholder shows in its place.
     photo:     "assets/portrait.png",
     // Your CV. Replace the file at assets/cv.pdf with your own.
-    cv:        "assets/CV.pdf",
+    cv:        "assets/cv.pdf",
     // Shown as a small badge when you fill it in (e.g. job-hunting status).
     // Leave as "" to hide it; edit the text anytime to show it again.
     // Example:  availability: "Open to research scientist & faculty roles — 2026",
@@ -73,12 +73,10 @@ window.SITE = {
   /* ── LINKS  (set any to "" to hide that icon) ───────────────────────────── */
   links: {
     email:        "parishar@iu.edu",
-    scholar:      "https://scholar.google.com/citations?user=IMuiAGIAAAAJ&hl=en&inst=13098912254855678857",
-    researchGate:        "https://www.researchgate.net/profile/Parichit-Sharma/research",
+    googlescholar: "https://scholar.google.com/citations?user=IMuiAGIAAAAJ&hl=en&inst=13098912254855678857",
     github:       "https://github.com/parichit",
     linkedin:     "https://www.linkedin.com/in/parichit-sharma-95158614a/",
-    // twitter:      "https://x.com/yourhandle",
-    googlescholar:"",
+    ResearchGate:        "https://www.researchgate.net/profile/Parichit-Sharma/research",
   },
 
   /* ── ABOUT  (a few short paragraphs) ────────────────────────────────────── */
